@@ -1,1 +1,1 @@
-liya
+print "hello";
