@@ -1,13 +1,16 @@
-﻿<%@ Page Language="C#" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
 
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta charset="utf-8" />
-    <title></title>    
+    <title></title>
 </head>
 <body>
-    <form id="form1" runat="server">   
+    <form id="form1" runat="server">
+        <div>
+            <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
+        </div>
     </form>
 </body>
 </html>
