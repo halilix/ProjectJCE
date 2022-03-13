@@ -23,29 +23,18 @@
 
 
   <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
-<script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyD4guLiOJJs6RtIg_bD0tY1jgLT-5QBplo",
-    authDomain: "yuvalimrooms.firebaseapp.com",
-    projectId: "yuvalimrooms",
-    storageBucket: "yuvalimrooms.appspot.com",
-    messagingSenderId: "196267781068",
-    appId: "1:196267781068:web:8c1c5d58cb2fcb53bf8b69",
-    measurementId: "G-3QYFY0CBM6"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-</script>
+  <script>
+    // Initialize Firebase
+    var config = {
+  apiKey: "AIzaSyD4guLiOJJs6RtIg_bD0tY1jgLT-5QBplo",
+  authDomain: "yuvalimrooms.firebaseapp.com",
+  databaseURL: "https://yuvalimrooms-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "yuvalimrooms",
+  storageBucket: "yuvalimrooms.appspot.com",
+  messagingSenderId: "196267781068",
+};
+    firebase.initializeApp(config);
+  </script>
   <script src="index.js"></script>
 
 </body>
