@@ -1,26 +1,45 @@
 <html>
 <head>
-  <title>Firebase Login</title>
+  <title>Renting</title>
   <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body dir=rtl>
 
-  <div  class="main-div">
+
+  <table width=30%><tr><td>
+   <div  class="main-div">
+  <label for="">שם המבקש:</label>
+  <hr />
+  <input type="text" />
+  <label for="">טלפון:</label>
+  <hr />
+  <input type="text" />
+  <label for="">כתובת:</label>
+  <hr />
+  <input type="text" />
+  <label for="">Email:</label>
+  <hr />
+  <input type="text" />
   <label for="Select a day:">בחר יום:</label>
   <hr />
   <input type="date" id="date1" name="date1" />
-  <label for="Select a day:">שם האירוע:</label>
+  <label for="">שם האירוע:</label>
   <hr />
   <input type="text" />
-  תקציר:
+  <label for="">תקציר:</label>
   <hr />
   <textarea width=100% rows="5" cols="35"></textarea>
+  <hr />
   <input type="submit" />
-  </div>
+    </div>
+  </td>
+</tr>
+</table>
+
 
   <div  align=right class="freeRooms-div">
-  חדרים פנויים:
+  <label for="">חדרים פנויים:</label>
   <hr />
   <input type="button" value="Room 1"/>
   <input type="button" value="Room 2"/>
@@ -28,7 +47,7 @@
   <input type="button" value="Room 4"/>
   </div>
   <div  align=right class="blockedRooms-div">
-  חדרים תפוסים:
+  <label for="">חדרים תפוסים:</label>
   <hr />
   <input type="button" value="Room 1"/>
   <input type="button" value="Room 2"/>
