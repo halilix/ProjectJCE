@@ -1,0 +1,73 @@
+Team 10 presentation 
+in collaboration with the Yuvalim Association
+
+Liya Avitan - Saar chalili  - Tomer Shafran - Barak Zafrani - Shira Eliyahu
+
+About Yuvalim:
+Yuvalim Community Administration will be an open house for the entire community
+and will provide a solution for the changing needs of each group and every detail in it.
+Yuvalim has 8 centers in jerusalem 
+Malha, Ramat Denya, Ein karem, Tailor house (two centers), Philip  Leon,  Rachel house and Shtern. 
+Yuvalim space will be accessible to everyone, people with special needs, children, parents and the elderly population.
+The residents of the Yuvalim neighborhood will be an enterprising and significant factor in the design of the educational, community, cultural and urban space.
+The administration will work in cooperation with all parties, develop a mutual guarantee and an enterprising company.
+
+Project goal: 
+Build a common system for all kind of users of Yuvalim in order to create one synchronized  and organized  system to manage events for Yuvalim’s 8 centers. 
+The System will include: 
+3 level of permissions -  admin, employees and community. 
+Ability to create accounts.
+Displaying information such as:
+Available rooms per day and hours.
+Information about existing events.
+Synchronized monthly calendar with ability to watch each day.
+Ability to create/cancel for events.
+Ability to request for events.
+Ability to determine available time windows for each facility.
+connections and communications with Yuvalim’s other platforms 
+
+3 USE CASE template: 
+
+1. Login
+Brief Description - the login function, the user will login with  password and username.
+Actors – Workers, Admin.
+Preconditions -  The user has an account.
+Basic Flow – login window open, the user will type username and password, the user will click on submit button 
+Alternate Flow – being on a new computer and answering a security question.
+Exception Flow – providing an incorrect username and password.
+Post conditions -  the user is logged in and can use the web services. 
+
+2. Add event
+Brief Description -  adding the events in the calendar.  waiting for approve (resident) 
+Actors – Residents, Workers, Admin.
+Preconditions -  The user is logged in and found an available room.
+Basic Flow – The calendar display, the user choose day and hour, choose available building and room . the user will add event details.  Admin and workers need to approve and can add/change/cancel events.
+Alternate Flow – don’t have an account/permissions , cannot login.
+Exception Flow –  there are not unavailable room/days.
+Post conditions – the user can rent a room for this event, watch, edit  the created event
+
+3. Rent a room
+Brief Description - the user will leave request for the requested room. only a manager will approve it privately with the user. 
+Actors – Residents - madatury, Workers.
+Preconditions -  logged in, request for adding event
+Basic Flow – click on the pay button, add connections details.  the details will be sent to the building manager.  The payment and sign on papers will be done directly with the manager.
+Alternate Flows - none.
+Exception Flow – the user didn’t add an event, the room is unavailable
+Post conditions – the user can watch the room details, request to  change to similar available room or to upgrade 
+
+Functional requirements
+1. Only a manager can approve or decline an event.
+2. Only a manager can determine a time window for events in each facility.
+3. Only the employees and the manager can watch a private event details such as amount of participants and the nature of the event. 
+4. The community will be able to watch public events details and join them.
+5. Each user will have 2 options of approaching to the reservation section: 
+	- The first option is threw each facility, click on a chosen facility will direct you to the calendar.
+	- The second option is to click on a wanted day on the calendar and it will direct you to the list of facilities with open rooms 	                          	   on this date.  
+6. The system must send a confirmation once the request for the rent has been approved.
+7. Once a request has been sent, the manager must be notified by a  system massage. 
+
+
+Non-Functional requirements
+1. The website will be available 24/7.	
+2. The website will support Hebrew.
+3. The website should be similar to the official yuvelim website as much as possible.
