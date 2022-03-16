@@ -1,0 +1,123 @@
+body {
+  background: #16223C;
+  color: white;
+  padding: 0px;
+  margin: 0px;
+	font-family: 'Tahoma';
+  font-size: 16px;
+    margin-top: 50px;
+}
+
+.main-div {
+  width: 80%;
+  margin: 0px auto;
+  padding: 50px;
+}
+
+
+
+.freeRooms-div {
+	font-family: 'Tahoma';
+	width: 75%;
+	margin: 0px auto;
+	padding: 20px;
+}
+
+.blockedRooms-div {
+	font-family: 'Tahoma';
+	width: 75%;
+	margin: 0px auto;
+	padding: 20px;
+}
+
+
+button {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  background-color: #5d8ffc;
+  border: 1px solid #5d8ffc;
+  border-radius: 10px;
+  padding: 15px;
+  display: block;
+  width: 100%;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+}
+
+
+.main-div input {
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 15px;
+	outline: none;
+	width: 100%;
+	margin-bottom: 20px;
+	transition: 0.3s;
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+}
+.checkbox-div input {
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	outline: none;
+	margin-bottom: 20px;
+	transition: 0.3s;
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+}
+.checkbox-div {
+	width: 80%;
+	margin: 0px auto;
+}
+
+
+
+table {
+	background: #375597;
+	color: white;
+	border: 1px solid #000;
+	border-radius: 30px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+.freeRooms-div input {
+  display: block;
+  border: 0px;
+  border-radius: 5px;
+  background: green;
+  padding: 15px;
+  outline: none;
+  width: 100%;
+  margin-bottom: 20px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+}
+
+.blockedRooms-div input {
+  border: 0px;
+  border-radius: 5px;
+  background: red;
+  padding: 15px;
+  outline: none;
+  width: 100%;
+  margin-bottom: 20px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+}
+
+input:focus {
+  border: 5px solid white;
+}
+
+
+button:hover {
+  background: #fff;
+  color: #5d8ffc;
+  border: 5px solid white;
+  cursor: pointer;
+}
