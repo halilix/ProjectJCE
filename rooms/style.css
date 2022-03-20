@@ -36,6 +36,7 @@ button {
   font-weight: 700;
   background-color: #5d8ffc;
   border-radius: 10px;
+  border: 0px;
   padding: 15px;
   display: block;
   width: 100%;
@@ -46,6 +47,7 @@ button {
 
 
 .main-div input {
+	border: 0px;
 	border-radius: 5px;
 	padding: 15px;
 	outline: none;
