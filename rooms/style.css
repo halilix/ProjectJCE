@@ -79,6 +79,7 @@ table {
   transition: 0.3s;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
+    font-weight: bold;
 }
 
 .blockedRooms-div input {
@@ -92,6 +93,7 @@ table {
   transition: 0.3s;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
+    font-weight: bold;
 }
 
 input:focus {
