@@ -1,6 +1,7 @@
 body {
-  background: #16223C;
-  color: white;
+  background: #FFFFF0;
+
+ 
   padding: 0px;
   margin: 0px;
 	font-family: 'Tahoma';
@@ -58,9 +59,8 @@ button {
 	-moz-transition: 0.3s;
 }
 table {
-	background: #375597;
-	color: white;
-	border: 1px solid #000;
+	background: #ADD8E6;
+	border: 0px solid #000;
 	border-radius: 30px;
 	margin-left: auto;
 	margin-right: auto;
@@ -68,10 +68,11 @@ table {
 
 
 .freeRooms-div input {
+	font-size : 15px;
   display: block;
   border: 0px;
   border-radius: 5px;
-  background: green;
+  background: #F0E68C;
   padding: 15px;
   outline: none;
   width: 100%;
@@ -83,9 +84,11 @@ table {
 }
 
 .blockedRooms-div input {
+		font-size : 15px;
+
   border: 0px;
   border-radius: 5px;
-  background: red;
+  background: #E9967A;
   padding: 15px;
   outline: none;
   width: 100%;
