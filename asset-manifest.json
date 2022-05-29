@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ProjectJCE.github.io/static/css/main.efd067ee.css",
+    "main.js": "/ProjectJCE.github.io/static/js/main.effdf754.js",
+    "index.html": "/ProjectJCE.github.io/index.html",
+    "main.efd067ee.css.map": "/ProjectJCE.github.io/static/css/main.efd067ee.css.map",
+    "main.effdf754.js.map": "/ProjectJCE.github.io/static/js/main.effdf754.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.efd067ee.css",
+    "static/js/main.effdf754.js"
+  ]
+}
