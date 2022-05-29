@@ -1,0 +1,17 @@
+.about-container {
+    display: flex;
+    margin-top: 20px;
+    width: 100%;
+}
+
+
+.about-text {
+    color: rgb(190, 14, 14);
+    font-size: 23px;
+}
+
+.about-text .subTitle {
+    color: black;
+    font-weight: bold;
+}
+

@@ -1,0 +1,8 @@
+.structures-container {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    column-gap: 5px;
+    row-gap: 10px;
+    width: 95%;
+    margin: auto;
+}
