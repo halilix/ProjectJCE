@@ -11,10 +11,10 @@ const HomePage = () => {
   const [imageUrl, setImageUrl] = useState('');
   const [showDetails, setShowDetails] = useState(null);
 
-  const getEventDetails = (event, url) => {
+  const getEventDetails = (event) => {
     setEvent(event);
     setShowDetails(true);
-    setImageUrl(url);
+    setImageUrl(event.imageUrl);
   }
 
   const closeDetails = () => {
@@ -23,7 +23,7 @@ const HomePage = () => {
     setImageUrl('');
   }
 
-  return (
+  return (<>
     <div className='home-page'>
 
       <HeadLile title="אירועים שלנו" />
@@ -39,9 +39,9 @@ const HomePage = () => {
         </div>
 
       </div>
-
-      {showDetails && <EventDetails event={event} imageUrl={imageUrl} onClose={closeDetails} />}
     </div>
+    {showDetails && <EventDetails event={event} imageUrl={imageUrl} onClose={closeDetails} />}
+  </>
   )
 
 

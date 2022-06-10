@@ -1,8 +1,9 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getStorage, ref, uploadBytes, deleteObject } from 'firebase/storage'
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged, deleteUser } from "firebase/auth";
-import { getFirestore, doc, getDoc, setDoc, collection, getDocs, deleteDoc } from 'firebase/firestore'
+import { getDownloadURL, getStorage, ref, uploadBytes } from 'firebase/storage'
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "firebase/auth";
+
+import { getFirestore, doc, getDoc, setDoc, collection, getDocs, deleteDoc, updateDoc, arrayUnion, arrayRemove } from 'firebase/firestore'
 import { v4 } from 'uuid';
 
 const firebaseConfig = {
@@ -29,7 +30,13 @@ export const creatAuthUserWithEmailAndPassword = async (email, password) => {
 
   if (!email || !password) return;
 
-  return await createUserWithEmailAndPassword(auth, email, password);
+  const current = auth.currentUser;
+
+  const user = await createUserWithEmailAndPassword(auth, email, password);
+
+  await auth.updateCurrentUser(current);
+
+  return user;
 }
 
 export const createUser = async (user, userInfo) => {
@@ -41,11 +48,13 @@ export const createUser = async (user, userInfo) => {
 
   if (!getUserFromDB.exists()) {
 
+    const { name, email, phoneNumber, role, extension, isAdmin, BuildManager } = userInfo;
+
     const date = new Date();
 
     try {
 
-      await setDoc(userDocRef, { ...userInfo, date });
+      await setDoc(userDocRef, { name, email, phoneNumber, role, extension, isAdmin, BuildManager, date });
 
     } catch (error) {
 
@@ -90,13 +99,12 @@ export const getCollection = async (collectionName) => {
 
   const collectionRef = collection(db, collectionName);
 
-  const allDocs = await getDocs(collectionRef)
+  const allDocs = await getDocs(collectionRef);
 
   const a = allDocs.docs.map((doc) => { return { ...doc.data(), id: doc.id } });
 
   return a;
 }
-
 
 export const logInWithEmailAndPassword = async (email, password) => {
 
@@ -105,13 +113,13 @@ export const logInWithEmailAndPassword = async (email, password) => {
   return await signInWithEmailAndPassword(auth, email, password);
 }
 
-export const deleteAuthUser = async (userInfo, currentUser) => {
-  if (!userInfo || !currentUser) return;
+export const deleteAuthUser = async (userInfo) => {
+  if (!userInfo) return;
 
-  await logInWithEmailAndPassword(userInfo.email, userInfo.password);
-  await deleteUser(auth.currentUser);
-  await deleteDocRef('users', userInfo.id);
-  await logInWithEmailAndPassword(currentUser.email, currentUser.password);
+  // await logInWithEmailAndPassword(userInfo.email, userInfo.password);
+  // await deleteUser(auth.currentUser);
+  await deleteDocRef('users', userInfo.id).then(() => { console.log("User has been successfully deleted") });
+  // await logInWithEmailAndPassword(currentUser.email, currentUser.password);
 
 }
 
@@ -133,16 +141,39 @@ export const addToStorage = async (file) => {
 
   const storageRef = ref(storage, url);
 
-  uploadBytes(storageRef, file).then((snapshot) => {
+  await uploadBytes(storageRef, file).then((snapshot) => {
     console.log('Uploaded a blob or file!');
-  });
+  }).catch((error) => { console.log(error) });
+
+  return await getDownloadURL(storageRef);
 
 }
 
 export const getDocByName = async (collectionName, docName) => {
 
-  const docRef = doc(db, collectionName,docName);
+  const docRef = doc(db, collectionName, docName);
 
   return await getDoc(docRef);
 
 }
+
+export const updateExistingDoc = async (collectionName, docId, docInfo) => {
+
+  const washingtonRef = doc(db, collectionName, docId);
+
+  await updateDoc(washingtonRef, {
+    rooms: arrayUnion(docInfo)
+  });
+}
+
+export const removeExistingDog = async (collectionName, docInfo) => {
+
+  const washingtonRef = doc(db, collectionName, docInfo.extension);
+
+  await updateDoc(washingtonRef, {
+    rooms: arrayRemove(docInfo)
+  });
+}
+
+
+

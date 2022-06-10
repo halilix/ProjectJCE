@@ -16,9 +16,10 @@ const Nav = () => {
 
         if (event.value === 'ניהול משתמשים')
             navigate('./users-manage');
-        else
+        else if (event.value === 'ניהול אירועים')
             navigate('./events-manage');
-
+        else
+            navigate('./requests-manage');
     }
 
     return (
@@ -42,7 +43,7 @@ const Nav = () => {
                     <Link to="Events" className='nav-link' >
                         לוח ארועים
                     </Link>
-                    <Link to="Contact" className='nav-link'>
+                    <Link to="Contact/nav/''" className='nav-link'>
                         צור קשר
                     </Link>
                     {currentUser && (currentUser.isAdmin || currentUser.BuildManager) &&
@@ -53,7 +54,8 @@ const Nav = () => {
                             placeholder="אפשרויות מנהל"
                             onChange={handleChange}
                             options={[{ label: 'ניהול משתמשים', value: 'ניהול משתמשים' },
-                            { lable: 'ניהול אירועים', value: 'ניהול אירועים' }]}
+                            { lable: 'ניהול אירועים', value: 'ניהול אירועים' },
+                            { lable: 'ניהול בקשות', value: 'ניהול בקשות' }]}
                         />}
 
                 </div>

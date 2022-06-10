@@ -2,7 +2,6 @@
   "name": "firebase",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://halilix/ProjectJCE.github.io",
   "dependencies": {
     "@fullcalendar/core": "^5.11.0",
     "@fullcalendar/daygrid": "^5.11.0",
@@ -24,16 +23,13 @@
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.0",
     "router-dom": "^2.2.9",
-    "save-dev": "^0.0.1-security",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [

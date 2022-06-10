@@ -9,11 +9,10 @@
 }
 
 .home-event-box{
-    width: 180px;
+    width: 200px;
     height: 280px;
     display: flex;
     flex-direction: column;
-    /* border:black 1px solid; */
     border-radius: 10px;
     position: relative;
     box-sizing: border-box;
